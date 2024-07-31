@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.top-container {
+  width: 100%;
+  height: 30vh;
+}
+
+.bottom-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(28, 28, 28);
+  color: aliceblue;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 10%;
+  border: 10px solid white;
+}
+
+.song-title {
+  position: absolute;
+  top: 48%;
+  font-size: 30px;
+}
+
+.artist {
+  position: absolute;
+  top: 54%;
+}
+
+.control-btns {
+display: flex;
+gap: 3rem;
+}
+
+.btns {
+  background: none;
+  border: none;
+}
+.play-btn {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+}
+
+.btns:hover::before {
+  position: absolute;
+  top: -120%;
+  left: -20%;
+  color: white;
+  font-size: 18px;
+  background-color: rgb(120, 117, 117);
+  padding: 5px;
+  border-radius: 5px;
+}
+.play-btn:hover::before{
+  content: 'play';
+}
+
+.play-btn:hover.playing::before{
+  content: 'Pause';
+  display: block;
+}
+
+.play-btn:hover:not(.playing)::before {
+  content: 'Play';
+  display: block;
+}
+
+
+
+.replay-btn {
+  position: absolute;
+  left: 45%;
+  top: 64%;
+}
+
+.replay-btn:hover::before {
+content: 'Replay';
+}
+
+.loop-btn {
+  position: absolute;
+  left: 55%;
+  top: 64%;
+}
+
+.loop-btn:hover::before {
+  content: 'Loop';
+  }
+.progress-bar {
+  flex: 10;
+  width: 700px;
+  height: 2px;
+  overflow: hidden;
+  background-color: #464545;
+  position: absolute;
+  top: 74%;
+  left: 30%;
+  display: flex;
+  flex-basis: 100%;
+  border-radius: 5px;
+  
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  /* transition: width 0.2s; */
+  background: white;
+  flex: 0;
+  flex-basis: 0%;
+}
+
+.loop-btn.active {
+ background-color:rgb(124, 246, 124);
+}
+.loop-btn.active::after {
+  content: ".";
+  color:  rgb(124, 246, 124);
+  left: 98%;
+  font-size: 16px;
+}
+
+.next-btn {
+  position: absolute;
+  top: 64%;
+  left: 52.5%;
+ 
+}
+
+.next-btn:hover::before {
+  content: 'Next';
+}
+
+.previous-btn {
+  position: absolute;
+  top: 64%;
+  left: 47.5%;
+ 
+}
+
+.previous-btn:hover::before {
+  content: 'Previous';
+}
+
+.mute-btn {
+  position: absolute;
+  top: 64%;
+  left: 72.5%;
+}
+
+.mute-btn:hover::before {
+  content: 'Mute';
+}
+
+.mute-btn:hover.muted::before{
+  content: 'Unmute';
+}
+
+.mute-btn:hover:not(.muted)::before{
+  content: 'Mute';
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  background: gray;
+  position: absolute;
+  top: 65.5%;
+  left: 75%;
+}
+.volume-slider:focus {
+  outline: none;
+}
+
+.volume-slide::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: gray;
+  border-radius: 2.5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 5px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* Firefox-specific styling for the slider thumb */
+.volume-slider::-moz-range-thumb {
+  width: 15px;
+  height: 25px;
+  background:white;
+  cursor: pointer;
+  border-radius: 50%;
+}

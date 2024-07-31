@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <bds />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+   <div class="container">
+    <div class="top-container">
+    </div>
+    <div class="bottom-container">
+      <img class="image" src="" alt="song image">
+      <h2 class="song-title"></h2>
+      <h5 class="artist"></h5>
+      <div class="controls">
+        <div class="control-btns">
+          <button class="replay-btn btns">
+            <i>
+              <img src="./assets/icons/replay-icon.svg" alt="replay button">
+            </i>
+          </button>
+          <button class="previous-btn btns">
+            <i>
+              <img src="./assets/icons/previous-icon.svg" alt="previous button">
+            </i>
+          </button>
+          <button class="play-btn btns">
+            <i>
+              <img src="./assets/icons/play-icon.svg" alt="play button" class="toggle">
+            </i>
+          </button>
+          <button class="next-btn btns">
+            <i>
+              <img src="./assets/icons/next-icon.svg" alt="next button">
+            </i>
+          </button>
+          <button class="loop-btn btns">
+            <i>
+              <img src="./assets/icons/repeat-icon.svg" alt="repeat button">
+            </i>
+     </button>
+     <button class="mute-btn btns">
+      <i>
+        <img src="./assets/icons/sound-on-icon.svg" alt="mute button" class="mute-icon">
+      </i>
+</button>
+<input type="range" name="volume" min="0" max="1" step="0.05" value="1" class="volume-slider" />
+        </div>
+        <p class="current-time"></div>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <p class="total-duration"></div>
+        <audio src="" class="audio"></audio>
+      </div>
+    </div>
+   </div>
+  </body>
+</html>
